@@ -1,4 +1,4 @@
-import awards from "../data/Awards";
+import awards from "../data/awards";
 
 import YearSection from "../components/awards/YearSection";
 
