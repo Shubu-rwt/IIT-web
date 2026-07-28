@@ -41,6 +41,7 @@
 
 import { Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/layout/Layout";
 
 import Homepage from "./pages/Homepage";
@@ -58,26 +59,26 @@ import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route index element={<Homepage />} />
-        <Route path="/" element={<Homepage />} />
+    <>
+      <ScrollToTop />
 
-        <Route path="/centre" element={<CentreOfExcellence />} />
-        <Route path="/publications" element={<PublicationsPage />} />
-        <Route path="/awards" element={<AwardsPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/collaborators" element={<CollaboratorsPage />} />
-        <Route path="/industry" element={<IndustryPage />} />
-        <Route path="/students" element={<StudentsPage />} />
-        <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-
-        {/* Optional 404 page */}
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </Layout>
+      <Layout>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/centre" element={<CentreOfExcellence />} />
+          <Route path="/publications" element={<PublicationsPage />} />
+          <Route path="/awards" element={<AwardsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/collaborators" element={<CollaboratorsPage />} />
+          <Route path="/industry" element={<IndustryPage />} />
+          <Route path="/students" element={<StudentsPage />} />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Layout>
+    </>
   );
 }

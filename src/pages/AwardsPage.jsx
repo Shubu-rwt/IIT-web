@@ -4,15 +4,15 @@ import YearSection from "../components/awards/YearSection";
 
 export default function AwardsPage() {
 
-  // Group Awards by Year
+  // Group awards by Year
 
-  const groupedAwards = awards.reduce((acc, Awards) => {
+  const groupedAwards = awards.reduce((acc, awards) => {
 
-    if (!acc[Awards.year]) {
-      acc[Awards.year] = [];
+    if (!acc[awards.year]) {
+      acc[awards.year] = [];
     }
 
-    acc[Awards.year].push(Awards);
+    acc[awards.year].push(awards);
 
     return acc;
 
@@ -48,7 +48,7 @@ export default function AwardsPage() {
               text-cyan-700
             "
           >
-            Awards
+            awards
           </span>
 
           <h1
@@ -60,7 +60,7 @@ export default function AwardsPage() {
               lg:text-5xl
             "
           >
-            Awards & Honours
+            awards & Honours
           </h1>
 
           <p
