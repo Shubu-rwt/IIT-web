@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer
       className="
-        ml-[280px]
+        lg:ml-[280px]
         bg-gradient-to-r
         from-[#183A88]
         via-[#21409A]
