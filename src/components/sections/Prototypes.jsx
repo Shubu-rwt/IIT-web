@@ -25,11 +25,11 @@ export default function Prototypes() {
   return (
     <section
       id="prototypes"
-      className="py-14 bg-[#F8FAFC]"
+      className="bg-[#F8FAFC] py-14"
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="mx-auto max-w-7xl px-8">
 
-        <p className="uppercase tracking-[4px] text-cyan-600 text-sm font-semibold">
+        <p className="text-sm font-semibold uppercase tracking-[4px] text-cyan-600">
           Innovation
         </p>
 
@@ -37,40 +37,41 @@ export default function Prototypes() {
           Developed Prototypes
         </h2>
 
-        <p className="mt-3 text-slate-500 max-w-2xl">
-          Biomedical devices and assistive technologies developed at the Neuromechanics Research Group.
+        <p className="mt-3 max-w-2xl text-slate-500">
+          Biomedical devices and assistive technologies developed at the
+          Neuromechanics Research Group.
         </p>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 mt-8">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
 
           {prototypes.map((item) => (
 
             <div
               key={item.title}
-              className="
-                rounded-2xl
-                overflow-hidden
-                bg-white
-                border
-                border-slate-200
-                hover:shadow-lg
-                transition
-              "
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
             >
 
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-36 w-full object-cover"
-              />
+              {/* Image */}
 
-              <div className="p-4">
+              <div className="flex h-52 items-center justify-center bg-slate-50 p-4">
 
-                <p className="text-[11px] uppercase tracking-[2px] text-cyan-600 font-semibold">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="max-h-full max-w-full object-contain"
+                />
+
+              </div>
+
+              {/* Content */}
+
+              <div className="p-5">
+
+                <p className="text-[11px] font-semibold uppercase tracking-[2px] text-cyan-600">
                   {item.category}
                 </p>
 
-                <h3 className="mt-2 text-lg font-bold text-slate-900">
+                <h3 className="mt-2 text-xl font-bold text-slate-900">
                   {item.title}
                 </h3>
 
