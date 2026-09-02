@@ -9,8 +9,6 @@ const gallery = [
 
     images: [
       "/gallery/rishabh-1.jpg",
-      "/gallery/rishabh-2.jpg",
-      "/gallery/rishabh-3.jpg",
     ],
   },
 
@@ -28,19 +26,19 @@ const gallery = [
     ],
   },
 
-  {
-    id: 3,
-    title: "Research Presentation at IIT Mandi",
-    category: "Conference",
-    date: "2025",
+  // {
+  //   id: 3,
+  //   title: "Research Presentation at IIT Mandi",
+  //   category: "Conference",
+  //   date: "2025",
 
-    cover: "/gallery/iitmandi-1.jpg",
+  //   cover: "/gallery/iitmandi-1.jpg",
 
-    images: [
-      "/gallery/iitmandi-1.jpg",
-      "/gallery/iitmandi-2.jpg",
-    ],
-  },
+  //   images: [
+  //     "/gallery/iitmandi-1.jpg",
+  //     "/gallery/iitmandi-2.jpg",
+  //   ],
+  // },
 
   {
     id: 4,
@@ -67,8 +65,6 @@ const gallery = [
     images: [
       "/gallery/matsuura-1.jpg",
       "/gallery/matsuura-2.jpg",
-      "/gallery/matsuura-3.jpg",
-      "/gallery/matsuura-4.jpg",
     ],
   },
 

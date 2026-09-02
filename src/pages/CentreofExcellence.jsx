@@ -17,12 +17,12 @@ const researchAreas = [
 ];
 
 const stats = [
-  { value: "120+", label: "Publications" },
-  { value: "25+", label: "Research Projects" },
-  { value: "8+", label: "Patents" },
+  { value: "90+", label: "Publications" },
+  { value: "10+", label: "Research Projects" },
+  { value: "5+", label: "Patents" },
   { value: "₹40+", label: "Crores Funding" },
-  { value: "30+", label: "Researchers" },
-  { value: "15+", label: "Global Collaborations" },
+  // { value: "30+", label: "Researchers" },
+  // { value: "15+", label: "Global Collaborations" },
 ];
 
 const facilities = [

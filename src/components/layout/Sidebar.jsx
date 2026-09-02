@@ -202,7 +202,7 @@ export default function Sidebar({
 
       </div>
 
-      {/* Bottom */}
+      {/* Bottom
 
       <div className="border-t border-gray-200 p-6">
 
@@ -222,9 +222,9 @@ export default function Sidebar({
           "
         >
           Download CV
-        </button>
+        </button> */}
 
-      </div>
+      {/* </div> */}
     </aside>
   );
 }

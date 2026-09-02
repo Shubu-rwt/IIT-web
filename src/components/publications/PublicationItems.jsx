@@ -2,7 +2,7 @@ import {
   FiCalendar,
   FiExternalLink,
   FiFileText,
-  FiBookOpen,
+  // FiBookOpen,
 } from "react-icons/fi";
 
 export default function PublicationItem({ publication }) {
@@ -181,7 +181,7 @@ export default function PublicationItem({ publication }) {
             </a>
           )}
 
-          <button
+          {/* <button
             className="
               inline-flex
               items-center
@@ -194,7 +194,7 @@ export default function PublicationItem({ publication }) {
           >
             <FiBookOpen />
             Cite
-          </button>
+          </button> */}
 
         </div>
 

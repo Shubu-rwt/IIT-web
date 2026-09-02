@@ -5,7 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/layout/Layout";
 
 import Homepage from "./pages/Homepage";
-import CentreOfExcellence from "./pages/CentreofExcellence";
+// import CentreOfExcellence from "./pages/CentreofExcellence";
 import PublicationsPage from "./pages/PublicationsPage";
 import AwardsPage from "./pages/AwardsPage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -26,7 +26,7 @@ export default function App() {
         <Routes>
           <Route index element={<Homepage />} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/centre" element={<CentreOfExcellence />} />
+          {/* <Route path="/centre" element={<CentreOfExcellence />} /> */}
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/awards" element={<AwardsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />

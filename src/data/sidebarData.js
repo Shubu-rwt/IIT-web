@@ -1,6 +1,6 @@
 const sidebarData = [
   { title: "Home", path: "/" },
-  { title: "Centre for Excellence", path: "/centre" },
+  // { title: "Centre for Excellence", path: "/centre" },
   // { title: "Research", path: "/research" },
   { title: "Publications", path: "/publications" },
   { title: "Awards", path: "/awards" },
