@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const opportunities = [
   {
     title: "Research Positions",
@@ -103,7 +104,7 @@ export default function WorkingOpportunities() {
 
         <div className="mt-10 text-center">
 
-          <button
+          {/* <button
             className="
               rounded-full
               bg-[#21409A]
@@ -116,8 +117,22 @@ export default function WorkingOpportunities() {
             "
           >
             Contact Us
-          </button>
-
+          </button> */}
+<Link
+                to="/contact"
+               className="
+              rounded-full
+              bg-[#21409A]
+              px-8
+              py-3
+              text-white
+              font-semibold
+              transition
+              hover:bg-[#19327b]
+            "
+              >
+                Contact
+              </Link>
         </div>
 
       </div>
