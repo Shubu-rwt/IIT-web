@@ -373,7 +373,7 @@
 import { Link } from "react-router-dom";
 
 import professor from "../../assets/images/professor.jpg";
-import heroImage from "../../assets/images/Deepak_Joshi.jpg";
+import heroImage from "../../assets/images/Deepak_Joshi.JPG";
 import hexagon from "../../assets/images/hexagon.svg";
 
 const interests = [
