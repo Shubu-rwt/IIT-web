@@ -1,6 +1,39 @@
 const awards = [
   {
     id: 1,
+    year: 2025,
+    title: "Young Researcher Award (NBRCOM)",
+    prize: "Second Prize",
+    student: "Saurabh Kumar",
+    description:
+      'Awarded at the Sixth Science Conclave cum National Biomedical Research Competition (NBRCOM) 2025 for the work "ADAT: Automated Dysphagia Assessment Tool" in the Health Sciences category.',
+    certificate: "/awards/NBRCOM.jpg",
+  },
+
+  {
+    id: 2,
+    year: 2025,
+    title: "Distinction in Doctoral Research",
+    prize: "Doctoral Distinction",
+    student: "Rishabh Bajpai",
+    description:
+      "Conferred the Distinction in Doctoral Research for the year 2025, a recognition awarded to the top 10% of graduates upon the unanimous recommendation of the Thesis Examiners.",
+    certificate: "/awards/Risabh_bajpai.gif",
+  },
+
+  {
+    id: 3,
+    year: 2024,
+    title: "Reliance Postgraduate Scholarship",
+    prize: "Scholarship",
+    student: "Apoorva Sharma",
+    description:
+      "Awarded the prestigious Reliance Postgraduate Scholarship for the academic year 2024-25.",
+    certificate: "",
+  },
+
+  {
+    id: 4,
     year: 2023,
     title: "Young Researcher Award",
     prize: "First Prize",
@@ -11,7 +44,7 @@ const awards = [
   },
 
   {
-    id: 2,
+    id: 5,
     year: 2023,
     title: "Best Research Paper",
     prize: "First Prize",
@@ -22,7 +55,7 @@ const awards = [
   },
 
   {
-    id: 3,
+    id: 6,
     year: 2021,
     title: "Gandhian Young Technological Innovation Award (GYTI)",
     prize: "GYTI",
@@ -33,7 +66,7 @@ const awards = [
   },
 
   {
-    id: 4,
+    id: 7,
     year: 2019,
     title: "Innovation & Patent Category",
     prize: "Third Prize",
@@ -44,7 +77,7 @@ const awards = [
   },
 
   {
-    id: 5,
+    id: 8,
     year: 2018,
     title: "Innovation & Patent Category",
     prize: "Second Prize",
@@ -55,7 +88,7 @@ const awards = [
   },
 
   {
-    id: 6,
+    id: 9,
     year: 2018,
     title: "Healthcare Technology Category",
     prize: "First Prize",
@@ -66,7 +99,7 @@ const awards = [
   },
 
   {
-    id: 7,
+    id: 10,
     year: 2017,
     title: "Research Innovation Award",
     prize: "Winner",
@@ -77,7 +110,7 @@ const awards = [
   },
 
   {
-    id: 8,
+    id: 11,
     year: 2017,
     title: "Leave A Nest Award",
     prize: "Winner",
@@ -88,7 +121,7 @@ const awards = [
   },
 
   {
-    id: 9,
+    id: 12,
     year: 2016,
     title: "National Conference Paper Presentation",
     prize: "Third Prize",

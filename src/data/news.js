@@ -3,12 +3,36 @@ const news = [
     id: 1,
     category: "Placement",
     title:
+      "Amit Kumar has been appointed to a postdoctoral position at the University of Naples Federico II in Italy.",
+    date: "2026",
+  },
+
+  {
+    id: 2,
+    category: "Placement",
+    title:
+      "Anandita will be joining the Cardiovascular Research Center at Massachusetts General Hospital in Boston to continue her research.",
+    date: "2026",
+  },
+
+  {
+    id: 3,
+    category: "Placement",
+    title:
+      "Apoorva, a former MTech researcher at the NRL Lab, has been appointed to a PhD position at ETH Zurich in Switzerland.",
+    date: "2026",
+  },
+
+  {
+    id: 4,
+    category: "Placement",
+    title:
       "Rohan Khatavkar joined as a Doctoral Research Fellow at Arizona State University, USA.",
     date: "2023",
   },
 
   {
-    id: 2,
+    id: 5,
     category: "Placement",
     title:
       "Rishabh Bajpai joined as a Post-Doctoral Researcher at Washington University in St. Louis.",
@@ -16,7 +40,7 @@ const news = [
   },
 
   {
-    id: 3,
+    id: 6,
     category: "Graduation",
     title:
       "Aayushi Khajuria (Ph.D. Scholar) graduated on 12 August 2023.",
@@ -24,7 +48,7 @@ const news = [
   },
 
   {
-    id: 4,
+    id: 7,
     category: "Achievement",
     title:
       "Dr. Deepak Joshi was elevated to Senior Member, IEEE.",
@@ -32,7 +56,7 @@ const news = [
   },
 
   {
-    id: 5,
+    id: 8,
     category: "Achievement",
     title:
       "Dr. Aayushi Khajuria received the DST INSPIRE Faculty Fellowship.",
@@ -40,7 +64,7 @@ const news = [
   },
 
   {
-    id: 6,
+    id: 9,
     category: "Placement",
     title:
       "Dr. Ashutosh Tiwari joined as a Post-Doctoral Research Fellow at the University of Illinois Chicago, USA.",
@@ -48,7 +72,7 @@ const news = [
   },
 
   {
-    id: 7,
+    id: 10,
     category: "Promotion",
     title:
       "Dr. Deepak Joshi was promoted to Associate Professor.",
@@ -56,7 +80,7 @@ const news = [
   },
 
   {
-    id: 8,
+    id: 11,
     category: "Graduation",
     title:
       "Ashutosh Tiwari (Ph.D. Scholar) graduated on 15 December 2021.",
@@ -64,7 +88,7 @@ const news = [
   },
 
   {
-    id: 9,
+    id: 12,
     category: "Placement",
     title:
       "Ashok Dan (M.Tech Student) joined Taiwan Semiconductor Manufacturing Company as a Data Engineer (₹51 LPA).",
@@ -72,7 +96,7 @@ const news = [
   },
 
   {
-    id: 10,
+    id: 13,
     category: "Graduation",
     title:
       "Anoop Kant Godiyal (Ph.D. Scholar) graduated on 8 September 2020.",
@@ -80,7 +104,7 @@ const news = [
   },
 
   {
-    id: 11,
+    id: 14,
     category: "Research",
     title:
       "Joint Ph.D. Fellowship awarded with AIIMS New Delhi and University College London (UCL).",
@@ -88,7 +112,7 @@ const news = [
   },
 
   {
-    id: 12,
+    id: 15,
     category: "Technology Transfer",
     title:
       "Intelligent Prosthetic Leg technology transferred to FUPRO Pvt. Ltd. (Tynor Partner).",
@@ -96,7 +120,7 @@ const news = [
   },
 
   {
-    id: 13,
+    id: 16,
     category: "Award",
     title:
       "Dr. Deepak Joshi received the Teaching Excellence Award on Teachers' Day.",
@@ -104,7 +128,7 @@ const news = [
   },
 
   {
-    id: 14,
+    id: 17,
     category: "Academic",
     title:
       "Conducted the GIAN Course: Prosthetics and Motor Learning.",

@@ -2,7 +2,6 @@ import {
   FiCalendar,
   FiExternalLink,
   FiFileText,
-  // FiBookOpen,
 } from "react-icons/fi";
 
 export default function PublicationItem({ publication }) {
@@ -28,6 +27,24 @@ export default function PublicationItem({ publication }) {
     publication.publisher ||
     "";
 
+  // Publication URL
+  const hasPublicationUrl =
+    typeof publication.publicationUrl === "string" &&
+    publication.publicationUrl.trim() !== "";
+
+  const publicationUrl = hasPublicationUrl
+    ? publication.publicationUrl.trim()
+    : null;
+
+  // PDF URL
+  const hasPdf =
+    typeof publication.pdf === "string" &&
+    publication.pdf.trim() !== "";
+
+  const pdfUrl = hasPdf
+    ? publication.pdf.trim()
+    : null;
+
   return (
     <article
       className="
@@ -38,9 +55,10 @@ export default function PublicationItem({ publication }) {
         py-6
         transition-all
         duration-300
+        last:border-b-0
       "
     >
-      {/* Left Accent */}
+      {/* Hover indicator */}
 
       <span
         className="
@@ -60,9 +78,13 @@ export default function PublicationItem({ publication }) {
 
       <div className="pl-5">
 
-        {/* Top */}
+        {/* =====================================================
+            TOP INFORMATION
+        ===================================================== */}
 
         <div className="flex flex-wrap items-center gap-3">
+
+          {/* Type */}
 
           <span
             className={`
@@ -79,20 +101,42 @@ export default function PublicationItem({ publication }) {
             {publication.type}
           </span>
 
-          <span className="flex items-center gap-1 text-sm text-slate-500">
+          {/* Year */}
+
+          <span
+            className="
+              flex
+              items-center
+              gap-1
+              text-sm
+              text-slate-500
+            "
+          >
             <FiCalendar size={14} />
+
             {publication.year}
           </span>
 
+          {/* Status */}
+
           {publication.status && (
-            <span className="text-sm text-emerald-600 font-medium">
+            <span
+              className="
+                text-sm
+                font-medium
+                text-emerald-600
+              "
+            >
               {publication.status}
             </span>
           )}
 
         </div>
 
-        {/* Title */}
+
+        {/* =====================================================
+            TITLE
+        ===================================================== */}
 
         <h3
           className="
@@ -101,26 +145,62 @@ export default function PublicationItem({ publication }) {
             font-bold
             leading-snug
             text-slate-900
-            transition-colors
-            duration-300
-            group-hover:text-[#163D88]
           "
         >
-          {publication.title}
+          {hasPublicationUrl ? (
+            <a
+              href={publicationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                transition-colors
+                duration-300
+                hover:text-[#163D88]
+                hover:underline
+                underline-offset-4
+              "
+            >
+              {publication.title}
+            </a>
+          ) : (
+            <span>
+              {publication.title}
+            </span>
+          )}
         </h3>
 
-        {/* Authors */}
+
+        {/* =====================================================
+            AUTHORS / INVENTORS
+        ===================================================== */}
 
         {(publication.authors || publication.inventors) && (
-          <p className="mt-3 text-[15px] leading-7 text-slate-600">
+          <p
+            className="
+              mt-3
+              text-[15px]
+              leading-7
+              text-slate-600
+            "
+          >
             {publication.authors || publication.inventors}
           </p>
         )}
 
-        {/* Journal / Conference */}
+
+        {/* =====================================================
+            JOURNAL / CONFERENCE / PUBLISHER
+        ===================================================== */}
 
         {venue && (
-          <p className="mt-3 italic text-[15px] text-slate-500">
+          <p
+            className="
+              mt-3
+              italic
+              text-[15px]
+              text-slate-500
+            "
+          >
             {venue}
 
             {publication.volume &&
@@ -134,71 +214,79 @@ export default function PublicationItem({ publication }) {
           </p>
         )}
 
-        {/* Bottom */}
 
-        <div className="mt-5 flex flex-wrap items-center gap-5">
+        {/* =====================================================
+            LINKS
+            Only displayed when a URL actually exists
+        ===================================================== */}
 
-          {publication.doi && (
-            <a
-              href={publication.doi.startsWith("http")
-                ? publication.doi
-                : `https://doi.org/${publication.doi}`
-              }
-              target="_blank"
-              rel="noreferrer"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                text-sm
-                font-medium
-                text-[#163D88]
-                hover:underline
-              "
-            >
-              <FiExternalLink />
-              DOI
-            </a>
-          )}
-
-          {publication.pdf && (
-            <a
-              href={publication.pdf}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                text-sm
-                font-medium
-                text-[#163D88]
-                hover:underline
-              "
-            >
-              <FiFileText />
-              PDF
-            </a>
-          )}
-
-          {/* <button
+        {(hasPublicationUrl || hasPdf) && (
+          <div
             className="
-              inline-flex
+              mt-5
+              flex
+              flex-wrap
               items-center
-              gap-2
-              text-sm
-              font-medium
-              text-slate-500
-              hover:text-[#163D88]
+              gap-5
             "
           >
-            <FiBookOpen />
-            Cite
-          </button> */}
 
-        </div>
+            {/* Publication URL */}
+
+            {hasPublicationUrl && (
+              <a
+                href={publicationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-medium
+                  text-[#163D88]
+                  transition-colors
+                  duration-200
+                  hover:underline
+                "
+              >
+                <FiExternalLink size={15} />
+
+                View Publication
+              </a>
+            )}
+
+
+            {/* PDF */}
+
+            {hasPdf && (
+              <a
+                href={pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-medium
+                  text-[#163D88]
+                  transition-colors
+                  duration-200
+                  hover:underline
+                "
+              >
+                <FiFileText size={15} />
+
+                PDF
+              </a>
+            )}
+
+          </div>
+        )}
 
       </div>
     </article>
   );
 }
+

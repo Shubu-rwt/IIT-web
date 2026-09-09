@@ -373,7 +373,7 @@
 import { Link } from "react-router-dom";
 
 import professor from "../../assets/images/professor.jpg";
-import heroImage from "../../assets/images/campus.jpg";
+import heroImage from "../../assets/images/Deepak_Joshi.jpg";
 import hexagon from "../../assets/images/hexagon.svg";
 
 const interests = [
@@ -615,67 +615,6 @@ export default function Hero() {
 
             <div className="relative w-full max-w-[420px]">
 
-
-              {/* Experience Badge */}
-
-              <div
-                className="
-                  absolute
-                  -left-5
-                  top-6
-                  z-10
-                  rounded-2xl
-                  border
-                  border-slate-200
-                  bg-white/95
-                  px-4
-                  py-3
-                  shadow-xl
-                  backdrop-blur-md
-                "
-              >
-
-                <h3 className="text-2xl font-bold text-[#21409A]">
-                  20+
-                </h3>
-
-                <p className="mt-1 text-[11px] uppercase tracking-[2px] text-slate-500">
-                  Years Research
-                </p>
-
-              </div>
-
-
-              {/* Publication Badge */}
-
-              <div
-                className="
-                  absolute
-                  -right-5
-                  bottom-6
-                  z-10
-                  rounded-2xl
-                  border
-                  border-slate-200
-                  bg-white/95
-                  px-4
-                  py-3
-                  shadow-xl
-                  backdrop-blur-md
-                "
-              >
-
-                <h3 className="text-2xl font-bold text-[#21409A]">
-                  90+
-                </h3>
-
-                <p className="mt-1 text-[11px] uppercase tracking-[2px] text-slate-500">
-                  Publications
-                </p>
-
-              </div>
-
-
               {/* Main Image */}
 
               <div className="overflow-hidden rounded-[28px] border border-slate-200 shadow-lg">
@@ -716,7 +655,7 @@ export default function Hero() {
             <div className="flex flex-col items-center justify-center border-b border-slate-200 py-6 lg:border-b-0 lg:border-r">
 
               <h3 className="text-3xl font-bold text-[#21409A]">
-                90+
+                100+
               </h3>
 
               <p className="mt-1 text-sm text-slate-500">

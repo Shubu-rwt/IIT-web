@@ -1,7 +1,151 @@
 
+// import { useState } from "react";
+// import {Phone, Menu, X } from "lucide-react";
+// import { Link } from "react-router-dom";
+// import logo from "../../assets/images/iit-logo.png";
+// import Sidebar from "./Sidebar";
+
+// export default function Navbar() {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   return (
+//     <>
+//       {/* ===================== NAVBAR ===================== */}
+//       <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-[#0A2558] via-[#10367F] to-[#17489E] shadow-md">
+//         <div className="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+
+//           {/* Left */}
+//           <div className="flex items-center gap-3">
+
+//             {/* Logo */}
+//             <div className="h-12 w-12 overflow-hidden rounded-full border border-white/20 bg-white/10">
+//               <img
+//                 src={logo}
+//                 alt="IIT Delhi"
+//                 className="h-full w-full object-cover"
+//               />
+//             </div>
+
+//             {/* Faculty Info */}
+//             <div className="leading-tight">
+
+//               <h1 className="text-lg font-bold text-white sm:text-xl lg:text-[28px]">
+//                 Deepak Joshi
+//               </h1>
+
+//               <p className="text-xs font-medium text-blue-100 sm:text-sm lg:text-[13px]">
+//                 Centre for Biomedical Engineering
+//               </p>
+
+//               <p className="hidden text-[11px] text-blue-200 md:block">
+//                 Indian Institute of Technology Delhi
+//               </p>
+
+//             </div>
+
+//           </div>
+
+//           {/* Desktop Right */}
+//           <div className="hidden items-center gap-6 lg:flex">
+
+//             <Link
+//               to="/contact"
+//               className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-medium text-white transition hover:bg-white/10"
+//             >
+//               Contact
+//               <Phone size={18} />
+//             </Link>
+
+//             {/* <div className="flex h-10 w-72 items-center rounded-full bg-white px-4 shadow">
+
+//               <Search
+//                 size={18}
+//                 className="text-slate-500"
+//               />
+
+//               <input
+//                 type="text"
+//                 placeholder="Search content..."
+//                 className="ml-2 w-full bg-transparent text-sm outline-none placeholder:text-slate-500"
+//               />
+
+//             </div> */}
+
+//           </div>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             onClick={() => setIsOpen(true)}
+//             className="rounded-xl border border-white/20 bg-white/10 p-2 text-white backdrop-blur-md transition hover:bg-white/20 lg:hidden"
+//           >
+//             <Menu size={24} />
+//           </button>
+
+//         </div>
+//       </header>
+
+      {/* ===================== MOBILE OVERLAY ===================== */}
+
+//       <div
+//         onClick={() => setIsOpen(false)}
+//         className={`fixed inset-0 z-40 bg-black/50 transition-all duration-300 lg:hidden ${
+//           isOpen
+//             ? "opacity-100 visible"
+//             : "opacity-0 invisible"
+//         }`}
+//       />
+
+//       {/* ===================== MOBILE DRAWER ===================== */}
+
+//       <div
+//         className={`fixed top-0 left-0 z-50 h-screen w-72 bg-white shadow-2xl transition-transform duration-300 lg:hidden ${
+//           isOpen
+//             ? "translate-x-0"
+//             : "-translate-x-full"
+//         }`}
+//       >
+
+//         {/* Drawer Header */}
+
+//         <div className="flex items-center justify-between border-b border-gray-200 p-5">
+
+//           <div>
+
+//             <h2 className="text-lg font-bold text-slate-900">
+//               Navigation
+//             </h2>
+
+//             <p className="text-xs text-slate-500">
+//               IIT Delhi Faculty Profile
+//             </p>
+
+//           </div>
+
+//           <button
+//             onClick={() => setIsOpen(false)}
+//             className="rounded-lg p-2 transition hover:bg-slate-100"
+//           >
+//             <X size={22} />
+//           </button>
+
+//         </div>
+
+//         {/* Sidebar */}
+
+//         <Sidebar
+//   mobile
+//   onClose={() => setIsOpen(false)}
+// />
+
+//       </div>
+//     </>
+//   );
+// }
+
+
 import { useState } from "react";
-import {Phone, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+
 import logo from "../../assets/images/iit-logo.png";
 import Sidebar from "./Sidebar";
 
@@ -12,91 +156,63 @@ export default function Navbar() {
     <>
       {/* ===================== NAVBAR ===================== */}
       <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-[#0A2558] via-[#10367F] to-[#17489E] shadow-md">
-        <div className="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[96px] max-w-[1600px] items-center px-4 sm:px-6 lg:px-8">
 
-          {/* Left */}
-          <div className="flex items-center gap-3">
+          {/* ===================== LEFT ===================== */}
+          <div className="flex h-full items-center gap-5">
 
-            {/* Logo */}
-            <div className="h-12 w-12 overflow-hidden rounded-full border border-white/20 bg-white/10">
+            {/* ===================== IIT LOGO ===================== */}
+            <div className="h-[72px] w-[72px] shrink-0 flex items-center justify-center">
               <img
                 src={logo}
                 alt="IIT Delhi"
-                className="h-full w-full object-cover"
+                className="h-[72px] w-[72px] object-contain"
               />
             </div>
 
-            {/* Faculty Info */}
-            <div className="leading-tight">
+            {/* ===================== FACULTY INFORMATION ===================== */}
+            <div className="flex flex-col justify-center pt-2 pb-4 leading-none">
 
-              <h1 className="text-lg font-bold text-white sm:text-xl lg:text-[28px]">
+              {/* Name */}
+              <h1 className="mb-1 text-xl font-bold text-white sm:text-2xl lg:text-[32px]">
                 Deepak Joshi
               </h1>
 
-              <p className="text-xs font-medium text-blue-100 sm:text-sm lg:text-[13px]">
+              {/* Department */}
+              <p className="mb-0.5 text-xs font-medium text-blue-100 sm:text-sm lg:text-[15px]">
                 Centre for Biomedical Engineering
               </p>
 
-              <p className="hidden text-[11px] text-blue-200 md:block">
+              {/* Institute */}
+              <p className="text-[11px] text-blue-200 md:block lg:text-[13px]">
                 Indian Institute of Technology Delhi
               </p>
 
             </div>
-
           </div>
 
-          {/* Desktop Right */}
-          <div className="hidden items-center gap-6 lg:flex">
-
-            <Link
-              to="/contact"
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-base font-medium text-white transition hover:bg-white/10"
-            >
-              Contact
-              <Phone size={18} />
-            </Link>
-
-            {/* <div className="flex h-10 w-72 items-center rounded-full bg-white px-4 shadow">
-
-              <Search
-                size={18}
-                className="text-slate-500"
-              />
-
-              <input
-                type="text"
-                placeholder="Search content..."
-                className="ml-2 w-full bg-transparent text-sm outline-none placeholder:text-slate-500"
-              />
-
-            </div> */}
-
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* ===================== MOBILE MENU BUTTON ===================== */}
           <button
             onClick={() => setIsOpen(true)}
-            className="rounded-xl border border-white/20 bg-white/10 p-2 text-white backdrop-blur-md transition hover:bg-white/20 lg:hidden"
+            className="ml-auto rounded-xl border border-white/20 bg-white/10 p-2 text-white backdrop-blur-md transition hover:bg-white/20 lg:hidden"
+            aria-label="Open navigation menu"
           >
             <Menu size={24} />
           </button>
-
         </div>
       </header>
 
       {/* ===================== MOBILE OVERLAY ===================== */}
-
       <div
         onClick={() => setIsOpen(false)}
         className={`fixed inset-0 z-40 bg-black/50 transition-all duration-300 lg:hidden ${
           isOpen
-            ? "opacity-100 visible"
-            : "opacity-0 invisible"
+            ? "visible opacity-100"
+            : "invisible opacity-0"
         }`}
       />
 
       {/* ===================== MOBILE DRAWER ===================== */}
-
       <div
         className={`fixed top-0 left-0 z-50 h-screen w-72 bg-white shadow-2xl transition-transform duration-300 lg:hidden ${
           isOpen
@@ -104,13 +220,10 @@ export default function Navbar() {
             : "-translate-x-full"
         }`}
       >
-
         {/* Drawer Header */}
-
         <div className="flex items-center justify-between border-b border-gray-200 p-5">
 
           <div>
-
             <h2 className="text-lg font-bold text-slate-900">
               Navigation
             </h2>
@@ -118,12 +231,12 @@ export default function Navbar() {
             <p className="text-xs text-slate-500">
               IIT Delhi Faculty Profile
             </p>
-
           </div>
 
           <button
             onClick={() => setIsOpen(false)}
             className="rounded-lg p-2 transition hover:bg-slate-100"
+            aria-label="Close navigation menu"
           >
             <X size={22} />
           </button>
@@ -131,12 +244,10 @@ export default function Navbar() {
         </div>
 
         {/* Sidebar */}
-
         <Sidebar
-  mobile
-  onClose={() => setIsOpen(false)}
-/>
-
+          mobile
+          onClose={() => setIsOpen(false)}
+        />
       </div>
     </>
   );

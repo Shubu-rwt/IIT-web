@@ -34,7 +34,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="IIT Delhi"
-              className="h-12 w-12 rounded-full bg-white p-1"
+              className="h-12 w-12 rounded-full bg-#0A2659 p-1"
             />
 
             <div>

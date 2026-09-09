@@ -109,6 +109,127 @@
 //   );
 // }
 
+// import { NavLink } from "react-router-dom";
+// import sidebarData from "../../data/sidebarData";
+
+// export default function Sidebar({
+//   mobile = false,
+//   onClose = () => {},
+// }) {
+//   return (
+//     <aside
+//       className={
+//         mobile
+//           ? "flex h-full flex-col bg-white"
+//           : `
+//             fixed
+//             top-[72px]
+//             left-0
+//             h-[calc(100vh-72px)]
+//             w-[280px]
+//             border-r
+//             border-gray-200
+//             bg-white
+//             flex
+//             flex-col
+//           `
+//       }
+//     >
+//       {/* Navigation */}
+
+//       <div className="flex-1 overflow-y-auto px-6 py-8">
+
+//         <nav className="space-y-2">
+
+//           {sidebarData.map((item) => (
+
+//             <NavLink
+//               key={item.path}
+//               to={item.path}
+//               onClick={mobile ? onClose : undefined}
+//             >
+//               {({ isActive }) => (
+
+//                 <div
+//                   className={`
+//                     group
+//                     flex
+//                     cursor-pointer
+//                     items-center
+//                     gap-4
+//                     rounded-full
+//                     px-4
+//                     py-3
+//                     transition-all
+//                     duration-300
+
+//                     ${
+//                       isActive
+//                         ? "bg-slate-100 text-slate-900 shadow-sm"
+//                         : "text-slate-500 hover:bg-slate-50 hover:text-[#163D88]"
+//                     }
+//                   `}
+//                 >
+
+//                   <span
+//                     className={`
+//                       h-2
+//                       w-2
+//                       rounded-full
+//                       transition-all
+//                       duration-300
+
+//                       ${
+//                         isActive
+//                           ? "bg-cyan-500"
+//                           : "bg-transparent group-hover:bg-[#163D88]"
+//                       }
+//                     `}
+//                   />
+
+//                   <span className="text-[15px] font-medium">
+//                     {item.title}
+//                   </span>
+
+//                 </div>
+
+//               )}
+//             </NavLink>
+
+//           ))}
+
+//         </nav>
+
+//       </div>
+
+//       {/* Bottom
+
+//       <div className="border-t border-gray-200 p-6">
+
+//         <button
+//           className="
+//             w-full
+//             rounded-full
+//             bg-[#2E56D6]
+//             py-3
+//             text-sm
+//             font-semibold
+//             text-white
+//             transition-all
+//             duration-300
+//             hover:bg-[#2348BD]
+//             hover:shadow-lg
+//           "
+//         >
+//           Download CV
+//         </button> */}
+
+//       {/* </div> */}
+//     </aside>
+//   );
+// }
+
+
 import { NavLink } from "react-router-dom";
 import sidebarData from "../../data/sidebarData";
 
@@ -136,33 +257,28 @@ export default function Sidebar({
       }
     >
       {/* Navigation */}
-
-      <div className="flex-1 overflow-y-auto px-6 py-8">
-
-        <nav className="space-y-2">
-
+      <div className="flex-1 overflow-y-auto px-5 py-7">
+        <nav className="w-full space-y-2">
           {sidebarData.map((item) => (
-
             <NavLink
               key={item.path}
               to={item.path}
               onClick={mobile ? onClose : undefined}
+              className="block w-full"
             >
               {({ isActive }) => (
-
                 <div
                   className={`
                     group
                     flex
+                    h-[52px]
+                    w-full
                     cursor-pointer
                     items-center
-                    gap-4
                     rounded-full
-                    px-4
-                    py-3
+                    px-5
                     transition-all
                     duration-300
-
                     ${
                       isActive
                         ? "bg-slate-100 text-slate-900 shadow-sm"
@@ -170,15 +286,18 @@ export default function Sidebar({
                     }
                   `}
                 >
-
+                  {/* Dot */}
                   <span
                     className={`
-                      h-2
-                      w-2
+                      flex
+                      h-2.5
+                      w-2.5
+                      shrink-0
+                      items-center
+                      justify-center
                       rounded-full
                       transition-all
                       duration-300
-
                       ${
                         isActive
                           ? "bg-cyan-500"
@@ -187,44 +306,24 @@ export default function Sidebar({
                     `}
                   />
 
-                  <span className="text-[15px] font-medium">
+                  {/* Navigation Text */}
+                  <span
+                    className="
+                      ml-5
+                      whitespace-nowrap
+                      text-[15px]
+                      font-medium
+                      leading-none
+                    "
+                  >
                     {item.title}
                   </span>
-
                 </div>
-
               )}
             </NavLink>
-
           ))}
-
         </nav>
-
       </div>
-
-      {/* Bottom
-
-      <div className="border-t border-gray-200 p-6">
-
-        <button
-          className="
-            w-full
-            rounded-full
-            bg-[#2E56D6]
-            py-3
-            text-sm
-            font-semibold
-            text-white
-            transition-all
-            duration-300
-            hover:bg-[#2348BD]
-            hover:shadow-lg
-          "
-        >
-          Download CV
-        </button> */}
-
-      {/* </div> */}
     </aside>
   );
 }
