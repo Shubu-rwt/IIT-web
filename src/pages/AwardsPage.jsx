@@ -60,7 +60,7 @@ export default function AwardsPage() {
               lg:text-5xl
             "
           >
-            awards & Honours
+            Awards & Honours
           </h1>
 
           <p
